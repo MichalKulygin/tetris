@@ -9,10 +9,12 @@
             </define>
             <run>
                 <include name="blocks"/>
+                <include name="blockRotatorCW"/>
             </run>
         </groups>
         <classes>
             <class name="com.epam.prejap.tetris.block.BlocksShapesTest"/>
+            <class name="com.epam.prejap.tetris.block.BlockRotatorCWTest"/>
         </classes>
     </test>
     <test verbose="2" name="jar tests">
