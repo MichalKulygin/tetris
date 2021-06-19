@@ -3,6 +3,8 @@ package com.epam.prejap.tetris.game;
 import com.epam.prejap.tetris.block.Block;
 import com.epam.prejap.tetris.block.BlockFeed;
 
+import static com.epam.prejap.tetris.block.BlockRotator.rotateBlockCW;
+
 public class Playfield {
 
     private final byte[][] grid;
@@ -33,11 +35,12 @@ public class Playfield {
     public boolean move(Move move) {
         hide();
         boolean moved;
-            switch (move) {
-                case LEFT -> moveLeft();
-                case RIGHT -> moveRight();
-            }
-            moved = moveDown();
+        switch (move) {
+            case LEFT -> moveLeft();
+            case RIGHT -> moveRight();
+            case UP -> rotateCCW();
+        }
+        moved = moveDown();
         show();
         return moved;
     }
@@ -109,4 +112,23 @@ public class Playfield {
         void act(int i, int j, byte dot);
     }
 
+    /**
+     * Method rotates block (if possible).
+     */
+    private void rotateCCW() {
+        if (isRotationPossible()) {
+            this.block = rotateBlockCW(block);
+        }
+    }
+
+    /**
+     * Method validates if it is possible to rotate block. Validation is done by comparing distance from current block position
+     * to remaining space on the playfield;
+     *
+     * @return false when block is too close to the bottom or right edge of playfield; true when rotation is possible;
+     * @author Michał Kułygin
+     */
+    private boolean isRotationPossible() {
+        return this.rows - row >= block.cols() && this.cols - col >= block.rows();
+    }
 }
