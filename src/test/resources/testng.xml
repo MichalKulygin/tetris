@@ -6,10 +6,10 @@
         <groups>
             <define name="blocks">
                 <include name="blockShapes"/>
+                <include name="blockRotatorCW"/>
             </define>
             <run>
                 <include name="blocks"/>
-                <include name="blockRotatorCW"/>
             </run>
         </groups>
         <classes>
