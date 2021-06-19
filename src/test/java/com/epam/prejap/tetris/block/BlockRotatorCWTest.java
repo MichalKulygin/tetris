@@ -3,7 +3,7 @@ package com.epam.prejap.tetris.block;
 /**
  *  Tests for rotating blocks clockwise.
  *
- * @author MKgn
+ * @author Michał Kułygin
  */
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
