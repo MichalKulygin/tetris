@@ -23,7 +23,7 @@ public class BlockRotator {
 
         for (int i = 0; i < rotatedBlockCols; i++) {
             for (int j = 0; j < rotatedBlockRows; j++) {
-                rotatedBlockImage[j][rotatedBlockCols - 1 - i] = block.image[i][j];
+                rotatedBlockImage[j][rotatedBlockCols - 1 - i] = block.dotAt(i, j);
             }
         }
 
