@@ -38,7 +38,7 @@ public class Playfield {
         switch (move) {
             case LEFT -> moveLeft();
             case RIGHT -> moveRight();
-            case UP -> rotateCCW();
+            case ROTATE_CW -> rotateCW();
         }
         moved = moveDown();
         show();
@@ -115,7 +115,7 @@ public class Playfield {
     /**
      * Method rotates block (if possible).
      */
-    private void rotateCCW() {
+    private void rotateCW() {
         if (isRotationPossible()) {
             this.block = rotateBlockCW(block);
         }
