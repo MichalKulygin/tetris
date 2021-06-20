@@ -9,7 +9,7 @@ package com.epam.prejap.tetris.block;
 public class BlockRotator {
 
     /**
-     * Method rotates block clock-wise.
+     * Method rotates block clockwise.
      *
      * @param block which user wish to rotate.
      * @return new Block with rotated image of original one.
@@ -28,5 +28,25 @@ public class BlockRotator {
         }
 
         return new RotatedBlock(rotatedBlockImage);
+    }
+
+    /**
+     * Method rotates block counter clockwise.
+     *
+     * @param block which user wish to rotate.
+     * @return new Block with rotated image of original one.
+     */
+    public static Block rotateBlockCCW(Block block) {
+        int rotatedBlockRows = block.rows();
+        int rotatedBlockCols = block.cols();
+
+        byte[][] imageOfRotatedBlock = new byte[rotatedBlockCols][rotatedBlockRows];
+
+        for (int i = 0; i < rotatedBlockCols; i++) {
+            for (int j = 0; j < rotatedBlockRows; j++) {
+                imageOfRotatedBlock[i][j] = block.dotAt(j, rotatedBlockCols - i - 1);
+            }
+        }
+        return new RotatedBlock(imageOfRotatedBlock);
     }
 }

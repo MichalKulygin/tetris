@@ -114,6 +114,7 @@ public class Playfield {
 
     /**
      * Method rotates block (if possible).
+     * @author Michał Kułygin
      */
     private void rotateCW() {
         if (isRotationPossible()) {
