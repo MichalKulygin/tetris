@@ -3,6 +3,7 @@ package com.epam.prejap.tetris.game;
 import com.epam.prejap.tetris.block.Block;
 import com.epam.prejap.tetris.block.BlockFeed;
 
+import static com.epam.prejap.tetris.block.BlockRotator.rotateBlockCCW;
 import static com.epam.prejap.tetris.block.BlockRotator.rotateBlockCW;
 
 public class Playfield {
@@ -39,6 +40,7 @@ public class Playfield {
             case LEFT -> moveLeft();
             case RIGHT -> moveRight();
             case ROTATE_CW -> rotateCW();
+            case ROTATE_CCW -> rotateCCW();
         }
         moved = moveDown();
         show();
@@ -113,12 +115,24 @@ public class Playfield {
     }
 
     /**
-     * Method rotates block (if possible).
+     * Method invokes clockwise block rotation method (if possible).
+     *
      * @author Michał Kułygin
      */
     private void rotateCW() {
         if (isRotationPossible()) {
             this.block = rotateBlockCW(block);
+        }
+    }
+
+    /**
+     * Method invokes counter-clockwise block rotation method (if possible).
+     *
+     * @author Michał Kułygin
+     */
+    private void rotateCCW() {
+        if (isRotationPossible()) {
+            this.block = rotateBlockCCW(block);
         }
     }
 
