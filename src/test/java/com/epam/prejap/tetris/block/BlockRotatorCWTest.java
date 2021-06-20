@@ -1,10 +1,11 @@
 package com.epam.prejap.tetris.block;
 
 /**
- *  Tests for rotating blocks clockwise.
+ * Tests for rotating blocks clockwise.
  *
  * @author Michał Kułygin
  */
+
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -85,10 +86,10 @@ public class BlockRotatorCWTest {
         return new Object[][]{
                 {0, 0, 0, "Incorrect dotAt(0, 0)"},
                 {0, 1, 1, "Incorrect dotAt(0, 1)"},
-                {0, 2, 0, "Incorrect dotAt(1, 0)"},
-                {1, 0, 1, "Incorrect dotAt(1, 1)"},
-                {1, 1, 1, "Incorrect dotAt(2, 0)"},
-                {1, 2, 1, "Incorrect dotAt(2, 1)"},
+                {0, 2, 0, "Incorrect dotAt(0, 2)"},
+                {1, 0, 1, "Incorrect dotAt(1, 0)"},
+                {1, 1, 1, "Incorrect dotAt(1, 1)"},
+                {1, 2, 1, "Incorrect dotAt(1, 2)"},
         };
     }
 
@@ -109,10 +110,10 @@ public class BlockRotatorCWTest {
         return new Object[][]{
                 {0, 0, 1, "Incorrect dotAt(0, 0)"},
                 {0, 1, 1, "Incorrect dotAt(0, 1)"},
-                {0, 2, 1, "Incorrect dotAt(1, 0)"},
-                {1, 0, 0, "Incorrect dotAt(1, 1)"},
-                {1, 1, 1, "Incorrect dotAt(2, 0)"},
-                {1, 2, 0, "Incorrect dotAt(2, 1)"},
+                {0, 2, 1, "Incorrect dotAt(0, 2)"},
+                {1, 0, 0, "Incorrect dotAt(1, 0)"},
+                {1, 1, 1, "Incorrect dotAt(1, 1)"},
+                {1, 2, 0, "Incorrect dotAt(1, 2)"},
         };
     }
 }
