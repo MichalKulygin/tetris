@@ -7,6 +7,7 @@
             <define name="blocks">
                 <include name="blockShapes"/>
                 <include name="blockRotatorCW"/>
+                <include name="blockRotatorCCW"/>
             </define>
             <run>
                 <include name="blocks"/>
@@ -15,6 +16,7 @@
         <classes>
             <class name="com.epam.prejap.tetris.block.BlocksShapesTest"/>
             <class name="com.epam.prejap.tetris.block.BlockRotatorCWTest"/>
+            <class name="com.epam.prejap.tetris.block.BlockRotatorCCWTest"/>
         </classes>
     </test>
     <test verbose="2" name="jar tests">
