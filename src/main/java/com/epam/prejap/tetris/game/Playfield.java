@@ -115,7 +115,7 @@ public class Playfield {
     }
 
     /**
-     * Method invokes clockwise block rotation method (if possible).
+     * Invokes clockwise block rotation method (if possible).
      *
      * @author Michał Kułygin
      */
@@ -126,7 +126,7 @@ public class Playfield {
     }
 
     /**
-     * Method invokes counter-clockwise block rotation method (if possible).
+     * Invokes counter-clockwise block rotation method (if possible).
      *
      * @author Michał Kułygin
      */
@@ -137,7 +137,7 @@ public class Playfield {
     }
 
     /**
-     * Method validates if it is possible to rotate block. Validation is done by comparing distance from current block position
+     * Validates if it is possible to rotate block. Validation is done by comparing distance from current block position
      * to remaining space on the playfield;
      *
      * @return false when block is too close to the bottom or right edge of playfield; true when rotation is possible;

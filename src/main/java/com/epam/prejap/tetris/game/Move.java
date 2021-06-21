@@ -5,8 +5,8 @@ public enum Move {
     NONE(' '),
     LEFT('h'),
     RIGHT('l'),
-    ROTATE_CW('k'),
-    ROTATE_CCW('j'),
+    ROTATE_CW('L'),
+    ROTATE_CCW('H'),
     ;
 
     private final int key;

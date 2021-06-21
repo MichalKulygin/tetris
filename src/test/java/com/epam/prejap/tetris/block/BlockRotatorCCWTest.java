@@ -1,11 +1,5 @@
 package com.epam.prejap.tetris.block;
 
-/**
- * Tests for rotating blocks counter-clockwise.
- *
- * @author Michał Kułygin
- */
-
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -13,6 +7,11 @@ import org.testng.annotations.Test;
 import static com.epam.prejap.tetris.block.BlockRotator.rotateBlockCCW;
 import static org.testng.Assert.assertEquals;
 
+/**
+ * Tests for rotating blocks counter-clockwise.
+ *
+ * @author Michał Kułygin
+ */
 @Test(groups = "blockRotatorCCW")
 public class BlockRotatorCCWTest {
 

@@ -1,15 +1,15 @@
 package com.epam.prejap.tetris.block;
 
 /**
- * Class with methods (rotateBlockCW, <s>rotateBlockCCW</s>) that provides new Block with rotated image of block passed as an argument.
- * <br>CCW rotation will be implemented as a next feature.</>
- *
+ * Rotates an image of a given block.
+ * @see #rotateBlockCW(Block)
+ * @see #rotateBlockCCW(Block)
  * @author Michał Kułygin
  */
 public class BlockRotator {
 
     /**
-     * Method rotates block clockwise.
+     * Rotates an image of a given block in clockwise direction.
      *
      * @param block which user wish to rotate.
      * @return new Block with rotated image of original one.
@@ -31,7 +31,7 @@ public class BlockRotator {
     }
 
     /**
-     * Method rotates block counter clockwise.
+     * Rotates an image of a given block in counter-clockwise direction.
      *
      * @param block which user wish to rotate.
      * @return new Block with rotated image of original one.
