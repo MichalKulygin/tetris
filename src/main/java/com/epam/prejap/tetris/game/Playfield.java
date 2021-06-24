@@ -41,10 +41,23 @@ public class Playfield {
             case RIGHT -> moveRight();
             case ROTATE_CW -> rotateCW();
             case ROTATE_CCW -> rotateCCW();
+            case TO_BOTTOM_NOW -> moveToBottom();
         }
         moved = moveDown();
         show();
         return moved;
+    }
+
+    /**
+     * Move immediately to bottom
+     * @see Playfield#isValidMove(Block, int, int)
+     */
+    private boolean moveToBottom() {
+        int i = 1;
+        while (isValidMove(block, i, 0)) {
+            i++;
+        }
+        return move(i - 1, 0);
     }
 
 

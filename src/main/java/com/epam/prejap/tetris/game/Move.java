@@ -7,6 +7,7 @@ public enum Move {
     RIGHT('l'),
     ROTATE_CW('L'),
     ROTATE_CCW('H'),
+    TO_BOTTOM_NOW('j')
     ;
 
     private final int key;
