@@ -5,7 +5,6 @@ import com.epam.prejap.tetris.game.Color;
 
 final class OBlock extends Block {
     private static final Logger LOGGER = Logger.getLogger(OBlock.class);
-    private static final byte COLOR_ID = Color.RED.id;
 
     /**
      * Byte array represents "O" block.
@@ -16,12 +15,12 @@ final class OBlock extends Block {
      *  -------------------
      */
     private static final byte[][] IMAGE = {
-        {COLOR_ID, COLOR_ID},
-        {COLOR_ID, COLOR_ID},
+        {1, 1},
+        {1, 1},
     };
 
     public OBlock() {
-        super(IMAGE);
+        super(IMAGE, Color.RED);
         LOGGER.trace("{} was created", getClass().getSimpleName());
     }
 

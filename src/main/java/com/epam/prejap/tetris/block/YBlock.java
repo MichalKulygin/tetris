@@ -10,7 +10,6 @@ import com.epam.prejap.tetris.game.Color;
  */
 final class YBlock extends Block {
     private static final Logger LOGGER = Logger.getLogger(YBlock.class);
-    private static final byte COLOR_ID = Color.YELLOW.id;
 
     /**
      * Byte array represents "Y" block.
@@ -22,13 +21,13 @@ final class YBlock extends Block {
      *  -------------------
      */
     private static final byte[][] IMAGE = {
-            {COLOR_ID, 0, COLOR_ID},
-            {0, COLOR_ID, 0},
-            {0, COLOR_ID, 0}
+            {1, 0, 1},
+            {0, 1, 0},
+            {0, 1, 0}
     };
 
     public YBlock() {
-        super(IMAGE);
+        super(IMAGE, Color.YELLOW);
         LOGGER.trace("{} was created", getClass().getSimpleName());
     }
 }

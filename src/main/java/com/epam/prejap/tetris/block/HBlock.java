@@ -10,7 +10,6 @@ import com.epam.prejap.tetris.game.Color;
  */
 final class HBlock extends Block{
     private static final Logger LOGGER = Logger.getLogger(HBlock.class);
-    private static final byte COLOR_ID = Color.CYAN.id;
 
     /**
      * Byte array represents "H" block.
@@ -22,12 +21,12 @@ final class HBlock extends Block{
      *  -------------------
      */
     private static final byte[][] IMAGE = {
-            {COLOR_ID, 0, COLOR_ID},
-            {COLOR_ID, COLOR_ID, COLOR_ID},
-            {COLOR_ID, 0, COLOR_ID}
+            {1, 0, 1},
+            {1, 1, 1},
+            {1, 0, 1}
     };
     public HBlock(){
-        super(IMAGE);
+        super(IMAGE, Color.CYAN);
         LOGGER.trace("{} was created", getClass().getSimpleName());
     }
 }

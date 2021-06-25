@@ -12,7 +12,6 @@ import com.epam.prejap.tetris.game.Color;
  */
 final class IBlock extends Block {
     private static final Logger LOGGER = Logger.getLogger(IBlock.class);
-    private static final byte COLOR_ID = Color.PURPLE.id;
 
     /**
      * Byte array represents "I" block.
@@ -25,13 +24,13 @@ final class IBlock extends Block {
      *  -------------------
      */
     private static final byte [][] IMAGE = {
-            {COLOR_ID},
-            {COLOR_ID},
-            {COLOR_ID},
-            {COLOR_ID},
+            {1},
+            {1},
+            {1},
+            {1},
     };
     public IBlock(){
-        super(IMAGE);
+        super(IMAGE, Color.PURPLE);
         LOGGER.trace("{} was created", getClass().getSimpleName());
     }
 }

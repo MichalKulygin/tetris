@@ -44,7 +44,11 @@ public class BlocksShapesTest {
 
     @Test(dataProvider = "dotAtData", dependsOnMethods = {"shouldBeRightQtOfRows", "shouldBeRightQtOfColumns"})
     public void shouldReturnRightBytesFromDotAtMethod(int i, int j, byte expectedDot) {
-        assertEquals(block.dotAt(i, j), expectedDot,
+        assertEquals(substituteColor(block.dotAt(i, j)), expectedDot,
                 String.format("%s: incorrect dotAt(%s, %s)", block.getClass().getSimpleName(), i, j));
+    }
+
+    private byte substituteColor(byte b) {
+        return (byte) (b > 0 ? 1 : 0);
     }
 }

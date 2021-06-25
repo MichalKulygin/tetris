@@ -1,5 +1,6 @@
 package com.epam.prejap.tetris.block;
 
+import com.epam.prejap.tetris.game.Color;
 import com.epam.prejap.tetris.logger.Logger;
 
 /**
@@ -10,6 +11,7 @@ import com.epam.prejap.tetris.logger.Logger;
  */
 final class ZBlock extends Block {
     private static final Logger LOGGER = Logger.getLogger(ZBlock.class);
+
 
     /**
      * Byte array represents "Z" block.
@@ -25,7 +27,7 @@ final class ZBlock extends Block {
     };
 
     public ZBlock() {
-        super(IMAGE);
+        super(IMAGE, Color.CYAN);
         LOGGER.trace("{} was created", getClass().getSimpleName());
     }
 }

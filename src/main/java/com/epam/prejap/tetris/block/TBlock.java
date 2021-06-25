@@ -11,7 +11,6 @@ import com.epam.prejap.tetris.game.Color;
  */
 final class TBlock extends Block {
     private static final Logger LOGGER = Logger.getLogger(TBlock.class);
-    private static final byte COLOR_ID = Color.GREEN.id;
     /**
      * Byte array represents "T" block.
      * In game will be displayed as (between lines):
@@ -21,12 +20,12 @@ final class TBlock extends Block {
      *  -------------------
      */
     private static final byte[][] IMAGE = {
-            {COLOR_ID, COLOR_ID, COLOR_ID},
-            {0, COLOR_ID, 0}
+            {1, 1, 1},
+            {0, 1, 0}
     };
 
     TBlock() {
-        super(IMAGE);
+        super(IMAGE, Color.GREEN);
         LOGGER.trace("{} was created", getClass().getSimpleName());
     }
 }

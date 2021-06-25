@@ -20,32 +20,32 @@ public class BlocksShapesData {
      */
     private static final Map<Supplier<Block>, byte[][]> blocks = new LinkedHashMap<>() {{
         put(HBlock::new, new byte[][]{
-                {Color.CYAN.id, 0, Color.CYAN.id},
-                {Color.CYAN.id, Color.CYAN.id, Color.CYAN.id},
-                {Color.CYAN.id, 0, Color.CYAN.id}
+                {1, 0, 1},
+                {1, 1, 1},
+                {1, 0, 1}
         });
         put(SBlock::new, new byte[][]{
-                {0, Color.BLUE.id, Color.BLUE.id},
-                {Color.BLUE.id, Color.BLUE.id, 0}
+                {0, 1, 1},
+                {1, 1, 0}
         });
         put(OBlock::new, new byte[][]{
-                {Color.RED.id, Color.RED.id},
-                {Color.RED.id, Color.RED.id}
+                {1, 1},
+                {1, 1}
         });
         put(TBlock::new, new byte[][]{
-                {Color.GREEN.id, Color.GREEN.id, Color.GREEN.id},
-                {0, Color.GREEN.id, 0}
+                {1, 1, 1},
+                {0, 1, 0}
         });
         put(YBlock::new, new byte[][]{
-                {Color.YELLOW.id, 0, Color.YELLOW.id},
-                {0, Color.YELLOW.id, 0},
-                {0, Color.YELLOW.id, 0}
+                {1, 0, 1},
+                {0, 1, 0},
+                {0, 1, 0}
         });
         put(IBlock::new, new byte[][]{
-                {Color.PURPLE.id},
-                {Color.PURPLE.id},
-                {Color.PURPLE.id},
-                {Color.PURPLE.id}
+                {1},
+                {1},
+                {1},
+                {1}
         });
         put(ZBlock::new, new byte[][]{
                 {1, 1, 0},
@@ -80,7 +80,7 @@ public class BlocksShapesData {
         byte[][] image = blocks.get(classToSupp.get(clazz));
         for (int i = 0; i < image.length; i++) {
             for (int j = 0; j < image[i].length; j++) {
-                data.add(new Object[]{i, j, image[i][j]});
+                data.add(new Object[]{i, j, (byte)(image[i][j] > 0 ? 1 : 0)});
             }
         }
         return data.iterator();

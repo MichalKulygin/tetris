@@ -11,7 +11,7 @@ public abstract class Block {
     private final int cols;
     Color color = Color.WHITE;
 
-    Block(byte[][] dots) {
+    Block(byte[][] dots, Color color) {
         rows = dots.length;
         if (dots.length == 0) {
             LOGGER.error("The image height of a block is 0. The block cannot be created");
@@ -31,7 +31,7 @@ public abstract class Block {
                     throw new IllegalArgumentException("Invalid dot value");
                 }
                 if(dot > 0){
-                    color = Color.getColorById(dot);
+                    this.color = color;
                     image[i][j] = color.id;
                 }
             }

@@ -46,25 +46,25 @@ public class BlockRotatorCWTest {
     @Test(dataProvider = "dotsRepresentationForRotatedCW_TBlock")
     public void dotAtRotatedCW_TBlockReturnCorrectValue(int i, int j, int expected, String message) {
 
-        int actual = tBlockRotatedCW.dotAt(i, j);
+        int actual = substituteColor(tBlockRotatedCW.dotAt(i, j));
         assertEquals(actual, expected, message);
     }
 
     @Test(dataProvider = "dotsRepresentationFor2TimesRotatedCW_TBlock")
     public void dotAt_2xRotatedCW_TBlockReturnCorrectValue(int i, int j, int expected, String message) {
-        int actual = tBlockRotatedCW2Times.dotAt(i, j);
+        int actual = substituteColor(tBlockRotatedCW2Times.dotAt(i, j));
         assertEquals(actual, expected, message);
     }
 
     @Test(dataProvider = "dotsRepresentationFor3TimesRotatedCW_TBlock")
     public void dotAt_3xRotatedCW_TBlockReturnCorrectValue(int i, int j, int expected, String message) {
-        int actual = tBlockRotatedCW3Times.dotAt(i, j);
+        int actual = substituteColor(tBlockRotatedCW3Times.dotAt(i, j));
         assertEquals(actual, expected, message);
     }
 
     @Test(dataProvider = "dotsRepresentationFor4TimesRotatedCW_TBlock")
     public void dotAt_4xRotatedCW_TBlockReturnCorrectValue(int i, int j, int expected, String message) {
-        int actual = tBlockRotatedCW4Times.dotAt(i, j);
+        int actual = substituteColor(tBlockRotatedCW4Times.dotAt(i, j));
         assertEquals(actual, expected, message);
     }
 
@@ -114,5 +114,9 @@ public class BlockRotatorCWTest {
                 {1, 1, 1, "Incorrect dotAt(1, 1)"},
                 {1, 2, 0, "Incorrect dotAt(1, 2)"},
         };
+    }
+
+    private byte substituteColor(byte b) {
+        return (byte) (b > 0 ? 1 : 0);
     }
 }

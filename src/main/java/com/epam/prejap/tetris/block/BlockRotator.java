@@ -27,7 +27,7 @@ public class BlockRotator {
             }
         }
 
-        return new RotatedBlock(rotatedBlockImage);
+        return new RotatedBlock(rotatedBlockImage, block.color());
     }
 
     /**
@@ -47,6 +47,6 @@ public class BlockRotator {
                 imageOfRotatedBlock[i][j] = block.dotAt(j, rotatedBlockCols - i - 1);
             }
         }
-        return new RotatedBlock(imageOfRotatedBlock);
+        return new RotatedBlock(imageOfRotatedBlock, block.color());
     }
 }
