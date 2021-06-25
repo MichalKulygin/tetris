@@ -1,5 +1,7 @@
 package com.epam.prejap.tetris.block;
 
+import com.epam.prejap.tetris.game.Color;
+
 /**
  * Generates a "J" block.
  *
@@ -14,6 +16,6 @@ final class JBlock extends Block {
     };
 
     public JBlock() {
-        super(IMAGE);
+        super(IMAGE, Color.PURPLE);
     }
 }
