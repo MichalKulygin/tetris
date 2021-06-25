@@ -3,29 +3,28 @@ package com.epam.prejap.tetris.block;
 import com.epam.prejap.tetris.logger.Logger;
 
 /**
- * Represents Y block in BlockFeed.
+ * Z block implementation.
  *
- * @author Anna Silenko
+ * @author Łukasz Niedziela
+ * @see Block
  */
-final class YBlock extends Block {
-    private static final Logger LOGGER = Logger.getLogger(YBlock.class);
+final class ZBlock extends Block {
+    private static final Logger LOGGER = Logger.getLogger(ZBlock.class);
 
     /**
-     * Byte array represents "S" block.
+     * Byte array represents "Z" block.
      * In game will be displayed as (between lines):
      *  -------------------
-     *      # #
-     *       #
-     *       #
+     *      ##
+     *       ##
      *  -------------------
      */
     private static final byte[][] IMAGE = {
-            {1, 0, 1},
-            {0, 1, 0},
-            {0, 1, 0}
+            {1, 1, 0},
+            {0, 1, 1}
     };
 
-    public YBlock() {
+    public ZBlock() {
         super(IMAGE);
         LOGGER.trace("{} was created", getClass().getSimpleName());
     }
